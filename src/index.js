@@ -20,9 +20,9 @@ app.get('/', function(req, res) {
     console.log('----------content--------------------', content);
     res.send(`
         <html>
-            <head>hello</head>
+            <head>header</head>
             <body>
-                hhh
+                ${content}
             </body>
         </html>
         `)
