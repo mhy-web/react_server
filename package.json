@@ -4,9 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "npm-run-all --parallel build dev",
-    "dev": "nodemon --watch build --exec node \"./build/bundle.js\"",
-    "build": "webpack --config webpack.server.js --watch",
+    "start": "npm-run-all --parallel build:** dev",
+    "dev": "nodemon --watch dist --exec node \"./dist/bundle.js\"",
+    "build:server": "webpack --config build/webpack.server.js --watch",
+    "build:client": "webpack --config build/webpack.client.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -24,6 +25,10 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.8.5",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "style-loader": "^0.23.1"
   },
   "devDependencies": {
@@ -38,6 +43,7 @@
     "webpack-dev-middleware": "^3.7.0",
     "webpack-dev-server": "^3.4.0",
     "webpack-hot-middleware": "^2.25.0",
+    "webpack-merge": "^4.2.1",
     "webpack-node-externals": "^1.7.2"
   }
 }
