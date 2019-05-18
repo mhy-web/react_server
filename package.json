@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "npm-run-all --parallel build:** dev",
-    "dev": "nodemon --watch dist --exec node \"./dist/bundle.js\"",
+    "dev": "nodemon --watch public --exec node \"./dist/bundle.js\"",
     "build:server": "webpack --config build/webpack.server.js --watch",
     "build:client": "webpack --config build/webpack.client.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
