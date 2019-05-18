@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import Routes from '@/Routes'
 import getStore from '@/store'
 
-export  const render = (req) => {
+export const render = (req) => {
     const content = renderToString((
         <Provider store={getStore()}>
             <StaticRouter location={req.path} content={{}}>
