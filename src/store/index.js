@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, combinreducers } from 'redux'
+import { createStore, applyMiddleware, combineReducers } from 'redux'
 import thunk  from 'redux-thunk'
 import { reducer as homeReducer } from '../views/Home/store'
 
@@ -6,7 +6,7 @@ import { reducer as homeReducer } from '../views/Home/store'
 //     return state
 // }
 
-const reducer = combinreducers({
+const reducer = combineReducers({
     home: homeReducer
 })
 
